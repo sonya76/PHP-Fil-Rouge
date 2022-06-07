@@ -3,7 +3,9 @@
 ?>
 <main>
 <?php
-    $page =  isset($_GET['page']) ? $page = $_GET['page'] : "N'existe pas";
-    echo $page;
+   $files = glob('./includes/*.inc.php');
+   echo "<pre>";
+   var_dump($files);
+   echo "</pre>"; 
 ?>
 </main>

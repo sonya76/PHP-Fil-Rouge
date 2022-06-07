@@ -1,4 +1,5 @@
 <?php
+require_once './functions/dump.php';
 
 date_default_timezone_set('Europe/Paris');
 //include meme erreur il continue alors au require s'arrete

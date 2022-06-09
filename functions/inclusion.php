@@ -9,6 +9,5 @@ function inclusion(string $page) : void {
     require $page;
     else
     require './includes/accueil.inc.php';
-    
-  
 }
+?>

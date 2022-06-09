@@ -1,8 +1,8 @@
 <form action="index.php?page=login" method="post">
 
     <div>
-        <label for="email">Identifiant</label>
-        <input type="text" name="email" id="email" value="<?=$email?>" />
+        <label for="mail">Identifiant</label>
+        <input type="text" name="mail" id="mail" value="<?=$mail?>" />
     </div>
     <div>
         <label for="password">Mot de passe</label>

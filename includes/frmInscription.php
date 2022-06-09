@@ -9,8 +9,8 @@
         <input type="text" name="prenom" id="prenom"  value="<?=$prenom?>" />
     </div>
     <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" value="<?=$email?>" />
+        <label for="mail">Email</label>
+        <input type="text" name="mail" id="mail" value="<?=$mail?>" />
     </div>
     <div>
         <input type="reset" value="Effacer">

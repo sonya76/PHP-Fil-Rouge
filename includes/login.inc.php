@@ -25,16 +25,16 @@ if (isset($_POST["frmLogin"])) {
         $messageErreur .= "</ul>";
 
         echo $messageErreur;
-        $_SESSION['loginUser'] = $mail;
+        
         include './includes/frmLogin.php';
     } else {
 
-        echo "Pas d'erreurs";
-       echo $_SESSION['loginUser'];
+        $_SESSION['loginUser'] = $mail;
+        header('Location:index.php?page=profil');
     }
 } else {
 
-    $mail = $password = "";
+    $mail = "";
     include './includes/frmLogin.php';
 }
 ?>

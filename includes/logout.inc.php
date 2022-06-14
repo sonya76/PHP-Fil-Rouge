@@ -1,4 +1,6 @@
 <?php
 session_destroy();
-echo "Vous n'êtes plus connecté";
+
+// echo 'session detruite !';
+header('Location: /index.php');
 ?>

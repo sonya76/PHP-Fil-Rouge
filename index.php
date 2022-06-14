@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["loginUser"];
+
 require_once './functions/appelFunctions.php';
 spl_autoload_register(function($className) {
     require './classes/' .$className . '.php';

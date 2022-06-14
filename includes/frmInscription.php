@@ -14,11 +14,11 @@
     </div>
     <div>
         <label for="password1">Mot de passe</label>
-        <input type="password1" name="password1" id="password1" value="<?=$password1?>" />
+        <input type="password" name="password1" id="password1" />
     </div>
     <div>
         <label for="password2">Vérification</label>
-        <input type="password2" name="password2" id="password2" value="<?=$password2?>"/>
+        <input type="password" name="password2" id="password2" />
     </div>
     <div>
         <input type="reset" value="Effacer">

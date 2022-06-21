@@ -1,5 +1,6 @@
 <h1>Login</h1>
 <?php
+
 if (isset($_POST['frmLogin'])) {
     $mail = htmlentities(trim($_POST['mail']));
     $password = htmlentities(trim($_POST['password']));
@@ -26,15 +27,34 @@ if (isset($_POST['frmLogin'])) {
         echo $messageErreur;
         include './includes/frmLogin.php';
     } else {
-        
-        $_SESSION['loginUser'] = $mail;
+        $requeteLogin = "SELECT password FROM utilisateurs WHERE mail='$mail'";
+        $sqlLogin = new Sql();
+        $resultatLogin = $sqlLogin->lister($requeteLogin);
 
-        $messageEmail = $mail . ' vous êtes connecté !';
+        if (count($resultatLogin) > 0) {
+            // Traitement pour vérifier le mot de passe
+            $resultatPassword = $resultatLogin[0]['password'];
 
-        sendEmail($mail, 'contact@ceppic-php-file-rouge.fr', 'Login Success', $messageEmail);
+            if (password_verify($mdp, $resultatPassword)) {
+                $message = "Vous êtes connecté";
+                $_SESSION['login'] = true;
 
-        header('Location:index.php?page=admin');
+                $messageEmail = $mail . ' vous êtes connecté !';
+                sendEmail($mail, 'contact@ceppic-php-file-rouge.fr', 'Login Success', $messageEmail);
+            } else {
+                $message = "Erreur d'authentification";
+                $_SESSION['login'] = false;
+            }
+        } else {
+            $message = "Votre adresse n'est pas dans la base";
+        }
 
+        echo $message;
+
+        $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
+
+        echo redirection($url, 2000);
+        echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>";
     }
 } else {
     $mail = "";

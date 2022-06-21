@@ -3,7 +3,7 @@
 function inclusion(string $page) : void {
 // glob * parcourt tout les fichiers du tableau
     $files = glob('./includes/*.inc.php');
-    $page = isset($_GET['page']) ? $_GET['page'] : "contact";
+    $page = isset($_GET['page']) ? $_GET['page'] : "profil";
     $page = "./includes/" . $page . ".inc.php";
     
     if(in_array($page, $files))

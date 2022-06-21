@@ -5,7 +5,7 @@
             <li><a href="index.php?page=contact">Contact</a></li>
             <li><a href="index.php?page=mentions">Mentions</a></li>
             <?php
-            if (isset($_SESSION['loginUser']) && !$_SESSION['loginUser'] === 0) { ?>
+            if (isset($_SESSION['loginUser']) && !$_SESSION['loginUser'] === false) { ?>
                 <li>
                     <a href="index.php?page=logout" titre="Se déconnecter">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>

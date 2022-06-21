@@ -2,7 +2,7 @@
 
     <div>
         <label for="mail">Identifiant</label>
-        <input type="email" name="mail" id="mail" value="<?=$mail?>" required />
+        <input type="text" name="mail" id="mail" value="<?=$mail?>" required />
     </div>
     <div>
         <label for="password">Mot de passe</label>

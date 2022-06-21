@@ -3,7 +3,7 @@
 ?>
 <main>
 <?php 
-    inclusion('contact');
+    inclusion('accueil');
 ?>
 
 </main>

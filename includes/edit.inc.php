@@ -1,3 +1,17 @@
+<?php
+if (!isset($_GET['id'])) {
+    header('Location:./index.php');
+}
+
+$query = new Sql();
+$requeteUser = 'SELECT * FROM utilisateurs where id_utilisateur = :idUser';
+// $query->prepare($requeteUser);
+
+$querySelect = new Sql();
+$users = $querySelect->lister($requete);
+
+// dump($users);
+?>
 <form action="index.php?page=inscription" method="post">
     <div>
         <label for="nom">Nom :</label>

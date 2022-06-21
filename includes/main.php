@@ -2,8 +2,7 @@
     require_once './includes/nav.php';
 ?>
 <main>
-<?php 
-    inclusion('accueil');
+<?php
+    inclusionIncFil('accueil');
 ?>
-
 </main>

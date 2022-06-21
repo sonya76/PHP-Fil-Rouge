@@ -1,6 +1,6 @@
 <?php
 
-function sendEmail($toEmail,$fromEmail,$sujetEmail,$messageEmail)
+function sendEmail($toEmail, $fromEmail, $sujetEmail, $messageEmail): void
 {
     $to      = $toEmail;
     $subject = $sujetEmail;
